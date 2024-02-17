@@ -1,0 +1,655 @@
+# _____________________________________________________________________
+#                           MACHINE LEARNING
+#               Prepared by AnthonyCRENG28, Rabbit industries.
+# _____________________________________________________________________
+
+# ------------------------------------------------------------------------ #
+
+# DATA:
+    
+    # QUALITATIVE  <Descriptive/Categorical> (Ordinal <Order Categories>, Nominal <Unordered Categories>
+    
+    # QUANTITATIVE <Numeric/Discrete>   (Binary, Nominal, Ordinal <1, 2, 3>,
+                   <Continuos> (Interval, Ratio) <2.1, 3.85, 10.5>)
+    
+# ------------------------------------------------------------------------ #
+    
+# Numeros Naturales (N) = Suma de los # Enteros
+
+# Numeros Enteros (Z) =  (-n...-3,-2,-1 < 0 > 1, 2,3...n)
+
+# Numeros Racionales (Q) = Conjunto de cocientos de dos numeros enteros
+
+# Numeros Irracionales (I) = Conjunto de los numeros decimales infinitos no periodicos e.g. 3.14.151892
+
+
+# ------------------------------------------------------------------------ #
+
+#### 01 - MACHINE_LEARNING_CONCEPT
+
+# Machine Learning:
+# Field of study that gives computers the ability to learn without being explicitly programmed.
+
+#### 02 - MACHINE_LEARNING_ALGORITHMS
+# It has 2 broad areas:
+
+# ------------------------------------------------------------------------ #
+
+#### 02.01 SUPERVISED_LEARNING_ALGORITHMS:
+    
+# Is a machine learning approach that’s defined by its use of <LABELED> datasets.
+# These datasets are to train or “supervise” algorithms.
+# Supervised Learning Models Anwers the WHY to Questions.
+# Examples:
+    # 01. Input: email, Output: spam, App: spam filtering
+    # 02. Input: audio, Output: text Scripts, App: speech recognition
+    # 03. Input: english, Output: spanish, App: machine translation
+    # 04. Input: Ad, user_info, Output: click, App: online_advertising
+    
+#### 02.01.01 Regression
+
+# Is a statistical technique for determining the relationship between a Dependant (y) and one or more independant variables.
+# Predicts Numbers <Continuos_Data> e.g.: HouseHold Prices
+# Is accomplished by using a Linear Regression.
+# Types: Simple Linear Regression and Multiple Linear Regression.
+# Let’s say we have a linear regression algorithm where the equation of the line on the graph is y=mx+b. Which of the following correctly describes this line? R/ Straight line
+
+# The formula for simple linear regression is Y = mX + b, where Y is the response (dependent) variable, X is the predictor (independent) variable, m is the estimated slope, and b is the estimated intercept.
+01. Training Set (Input)
+02. Learning Algorithm
+03. Produce "f" (function=model) aka hypothesis (f takes "x" input(features) values then estimates "y" prediction values)
+04. Produce "ŷ" (y hat) 
+
+#### 02.01.02 Classification
+
+# The Classification algorithm is a Supervised Learning technique that is used to identify the category of new observations on the basis of training data. In Classification, a program learns from the given dataset or observations and then classifies new observation into a number of classes or groups. Such as, Yes or No, 0 or 1, Spam or Not Spam, cat or dog
+# Predicts Categories <Categorical_Data> e.g.: benign/malignant, cat/dog
+# Is accomplished by using a Logistic Regression.
+# Types: Decision Trees and Random Forest
+# Graphical Analysis is asses using the S-Shaped Curve aka Logistic Sigmoid Function: A sigmoid function is a mathematical function with a characteristic "S"-shaped curve or sigmoid curve. It transforms any value in the domain to a number between 0 and 1.
+# https://mindthegraph.com/blog/sigmoid-pattern/ , https://www.learndatasci.com/glossary/sigmoid-function/
+
+#### 02.01.02.02 Logistic Regression:
+    # Logistic regression’s output lies between 0 and 1 as the algorithm is designed to predict a binary outcome for an event based on the previous observations of a data set. It uses independent variables to predict the occurrence or failure of specific events.
+
+#### 02.01.02.02 Decision Trees:
+    # For CLASSIFICATION_Models, responds: Succeed/Not Succeed.
+    # For REGRESSION_Models, responds: e.g.: Score 75
+    # A decision node in a decision tree is also known as a feature.
+    # Pruning: Technique to remove unnecesary unvaluable questions from a Decision Tree, used to improve the decision tree.
+
+#### 02.01.02.03 Random Forest:
+    # Decision Trees Assembly
+    # Each tree represent randomness.
+    # D. Trees are not correlated
+    # The class label with the most votes shall be our final prediction.
+    # One difference between K-means and hierarchical clustering is that hierarchical clustering does not require us to select an initial value for the number of clusters, while K-means clustering does. R/ True. In hierarchical clustering, we aim to first understand the relationship between the clusters visually, and then determine the number of clusters, or hierarchy level, that best portrays the different groupings.
+
+# ------------------------------------------------------------------------ #
+
+#### 02.02 UNSUPERVISED LEARNING:
+# Is a Machine Learning algorithm to analyze and cluster <UNLABELED> data sets. 
+# These algorithms discover hidden patterns in data without the need for human intervention
+# Data only comes with inputs x, but not output labels y. Algorithm has to find structure in data.
+# How does an unsupervised machine learning algorithm work? R/ By inferring underlying patterns from an unlabeled dataset (clustering).
+    
+#### 02.02.01 Clustering:
+    # Group patterns / similarities data points together.
+    # 02.02.01.01 K-Means: 
+        # Is a method of separating data points into clusters, characterized by their midpoints, which we call centroids.
+        # k=Clusters, centroids=random, measures the Euclidean_Distance between each point vrs centroids, reassigns crentroids, recalculates and finally computes results
+        # Elobw Plot allows us to determine the optimal "k" number
+    # 02.02.01.02 Hierachical: 
+        # Generates clusters based on huierarchical relationships between data points.
+        # Declares multiple clusters, measures euclidean distances between clusters, iterates the same process until all clusters are merged into one single cluster
+        # Dendogram is utilized to show the correlation between clusters and determine the optimal number of numbers.
+
+
+
+#### 02.02.02 Anomaly Detection
+# Find unusual data points
+# Example: 
+
+#### 02.02.03 Dimensionality Reduction
+# Compress data using fewer numbers
+# Example: 
+
+# Web_Sources:
+# https://www.ibm.com/cloud/blog/supervised-vs-unsupervised-learning
+
+# ------------------------------------------------------------------------ #
+
+#### 03 - MODEL VALIDATION
+
+#### 03.01 Model_Validation_Concept:
+# Refers to the process of confirming that the model achieves its intended purpose: e.g.: how effective our model is.
+
+
+#### 03.02 Model_Validation_Stages:
+    
+    #### STAGE_01: Train and Test: Split the Dataset e.g.: 80_Train/20_Test
+    
+    
+    #### STAGE_02: Hyperparameters: The Data Scientist have to set and tunned hyperparameters the model will use.
+    
+        #### 02.01 Validation_Strategies:
+            
+            #### 02.01.01 K-Fold Cross Validation: The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into. As such, the procedure is often called k-fold cross-validation. When a specific value for k is chosen, it may be used in place of k in the reference to the model, such as k=10 becoming 10-fold cross-validation.
+                
+                            # Procedure:
+                                # Shuffle the dataset randomly.
+                                # Split the dataset into k groups
+                                # For each unique group:
+                                # Take the group as a hold out or test data set
+                                # Take the remaining groups as a training data set
+                                # Fit a model on the training set and evaluate it on the test set
+                                # Retain the evaluation score and discard the model
+                                # Summarize the skill of the model using the sample of model evaluation scores
+                                # https://machinelearningmastery.com/k-fold-cross-validation/
+                            # Benefits: 
+                                # More Robust, Uses the Entire Dataset, Less Variance, Upper Cost, Consumes More Computational Resources.
+                   
+            #### 02.01.02 Hold-Out Validation
+            
+                            # Hold-out method for Model Evaluation:
+                                # The hold-out method for model evaluation represents the mechanism of splitting the dataset into training and test datasets.
+                            # Hold-out method for Model Selection:
+                                # the dataset is split into three different sets – training, validation, and test dataset. 
+                            # Benefits: 
+                                # Less Robust, Less Time Consuming, Less Cost             
+                            # Source: (https://vitalflux.com/hold-out-method-for-training-machine-learning-model/)
+   
+    
+   #### STAGE_03: Overfitting: 
+        
+        # Overfitting happens when a model fits the training dataset too well. It memorizes that dataset and does not learn the relationship between the inputs and outputs.
+        # On the contrary <Regularization> is the remedy for Overfitting. Regularization is the technique to minimize the complexity of the model.
+   
+    
+    #### STAGE_04: Validation_Models: 
+        # This are tools/metrics to evaluate Machine Learning Models. 
+            
+        #### 04.01 Type of Validation Models:
+            
+            #### 04.01.01 Validation_Tools for <CLASSIFICATION_Models>: *******************************       
+                    
+                    #### 04.01.01.01 Confusion Matrix:
+                        # Also known as an Error Matrix is a specific table layout that allows
+                        # visualization of the performance of an algorithm and shows the correct and incorrect predictions
+                        # made by the model at a specific threshold.
+                        # (in unsupervised learning it is usually called a matching matrix).                        
+                        # https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/
+                        # https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62
+                        
+                    #### 04.01.01.02 TPR & FPR:                        
+                        # True Positive Rate <Recall - Sensitivity>: Likelihood that an actual positive will test positive
+                        # TPR = TP/P                        
+                        # False Positive Rate <Specificity>: Probability that the model will predict a positive when the actual is negative.
+                        # FPR = FP/                        
+                        # Resources: https://medium.datadriveninvestor.com/confusion-matric-tpr-fpr-fnr-tnr-precision-recall-f1-score-73efa162a25f
+                    
+                    #### 04.01.01.03 ROC / AUC Curve:                        
+                        # An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds. This curve plots two parameters:
+                            # True Positive Rate, where TPR = TP/TP+FN
+                            # False Positive Rate, where FPR = FP/FP+TN                            
+                        # An AUC Curve: AUC represents the degree or measure of separability.
+                            # Resources: https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc
+                            # Resources: https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
+                            
+                    #### 04.01.01.04 Accuracy
+                    
+                    #### 04.01.01.05 Recall:
+                    
+                    #### 04.01.01.06 Precision: 
+        
+            #### 04.01.02 Validation_Tools for <REGRESSION_Models>: *******************************************
+            
+                    #### 04.01.02.01 Mean Square Error (MSE):
+                        # In statistics, the mean squared error (MSE) or mean squared deviation (MSD) of an estimator measures the average of the squares of the errors—that is, the average squared difference between the estimated values and the actual value.
+                    #### 04.01.02.02 R2 (R-SQUARED):
+                        # R-squared (R2) is a statistical measure that represents the proportion of the variance for a dependent variable that's explained by an independent variable or variables in a regression model.
+                        # https://www.investopedia.com/terms/r/r-squared.asp
+                
+
+#### 05 - TERMINOLOGY
+
+#### 05.01 - ML_DATAIKU_GLOSSARY: https://doc.dataiku.com/dss/latest/machine-learning/index.html
+
+#### 05.02 - STATISTICAL SYMBOLS, CONCEPTS AND FORMULAS: https://www.rapidtables.com/math/symbols/Statistical_Symbols.html
+
+#### 1
+#### 2
+#### 2-Dimensional_KDE_Plot:
+    # DSS uses what kind of kernel for the 2-dimensional KDE plot? R/ Gaussian(Normal)
+#### A
+#### Adjustment Methods:
+    # Q: The adjustment methods reduce the probability of making type I errors when making multiple comparisons, by adjusting the observed p-value and comparing it to the: R/ pre-specified significance level
+#### B
+#### Bayesian_Analysis:
+    # Bayesian analysis, a method of statistical inference (named for English mathematician Thomas Bayes) that allows one to combine prior information about a population parameter with evidence from information contained in a sample to guide the statistical inference process.
+    # https://www.britannica.com/science/Bayesian-analysis
+#### Beta_Parameters:
+    # See also <Significance_Level>
+    # Beta parameters are parameters that are estimated directly in the likelihood function based on the columns of the design matrix. 
+    # The <Beta_Distribution> has two shape parameters, α and β. Both parameters must be positive values.
+    # 01. α (Alpha) is the probability of Type I error in any hypothesis test: Reject H0 when is TRUE.
+    # 02. β (Beta) is the probability of Type II error in any hypothesis test: Accept H0 when is FALSE.
+    # Those parameters should be tunned manually by the Scientific OR estimated based on Input_Variables (Col, Datasets).
+    # https://www.theanalysisfactor.com/confusing-statistical-terms-1-alpha-and-beta/
+    # https://support.minitab.com/es-mx/minitab/20/help-and-how-to/statistics/basic-statistics/supporting-topics/basics/type-i-and-type-ii-error/
+#### Bivariate_Distribution:
+    # Is a joint distribution with two variables of interest. The bivariate distribution gives probabilities for simultaneous outcomes of the two random variables.
+    # If the two variables are obtained through random sampling, you may be able to find correlations or run a regression analysis to investigate the link between the two variables or to predict future (or past) behavior of those variables.
+    # https://www.statisticshowto.com/bivariate-distribution/
+#### Bonferroni_Correction:
+    # The Bonferroni correction is an adjustment made to P values when several dependent or independent statistical tests are being performed simultaneously on a single data set.
+    # To perform a Bonferroni correction, divide the critical P value (α) by the number of comparisons being made.
+    # See also <Holm Bonferroni>
+    # https://www.aaos.org/aaosnow/2012/apr/research/research7/#:~:text=The%20Bonferroni%20correction%20is%20an,number%20of%20comparisons%20being%20made.
+#### C
+#### Correlation_Matrix:
+    # A correlation matrix is a table showing correlation coefficients between variables. 
+    # Each cell in the table shows the correlation between two variables.
+    # Correlation coefficient values can range from 1 to -1.
+    # A correlation matrix is used to summarize data, as an input into a more advanced analysis, and as a diagnostic for advanced analyses.
+    # Types:
+        # 01. Pearson parametric correlation test
+        # 02. Spearman 
+        # 03. Kendall rank-based correlation analysis.
+#### Covariance:
+    # In probability theory and statistics, covariance is a measure of the joint(degree) variability of two random variables.[
+    # If the greater values of one variable mainly correspond with the greater values of the other variable, and the same holds for the lesser values (that is, the variables tend to show similar behavior), the covariance is positive
+    # on the opposite, 
+    # When the greater values of one variable mainly correspond to the fewer values of the other, (that is, the variables tend to show opposite behavior), the covariance is negative.
+    # The sign of the covariance, therefore, shows the tendency in the linear relationship between the variables.
+#### Curve_Fitting:
+    # Is the process of constructing a curve, or mathematical function, that has the best fit to a series of data points, possibly subject to constraints.
+    # Types:
+        # 01. Best Fit (Smooth, where data is noisy(points are nearly over the curve)).
+        # 02. Exact Fit (xxx, where data is Not-Noisy(points are over the curve).
+    # Fitting_Functions:
+        # Linear, Quadratic, Cubic, Trigonometric, Gaussian, Sigmoid.
+    # Curve_Fitting_Algorithms:
+        # Least of Squares,  
+    # Example: Fitted curves can be used as an aid for data visualization, to infer values of a function where no data are available, and to summarize the relationships among two or more variables.
+    # Resources: https://www.baeldung.com/cs/curve-fitting
+#### D
+#### Descriptive_Statistics:
+    # Descriptive statistics are brief informational coefficients that summarize a given data set, which can be either a representation of the entire population or a sample of a population.
+    # Comprehends Measurements: Central Tendency + Dispersion + Frequency
+    # https://www.investopedia.com/terms/d/descriptive_statistics.asp
+#### Density_Function<PDF: Prob.Den.Func>:
+    # What Is a Probability Density Function (PDF)? Probability density function (PDF) is a statistical expression that defines a probability distribution (the likelihood of an outcome) for a discrete random variable
+    # https://www.investopedia.com/terms/p/pdf.asp#:~:text=What%20Is%20a%20Probability%20Density,to%20a%20continuous%20random%20variable.
+#### Determinisitic_Trend:
+    # If the series has a stable long-term trend and the values of the series tend to return to the trend line after a shock, then we are seeing a deterministic trend.
+    # See also: Stochastic_Trend
+#### Dimensionality_Reduction:
+    # Dimensionality reduction, or dimension reduction, is the transformation of data from a high-dimensional space into a low-dimensional space so that the low-dimensional representation retains some meaningful properties of the original data, ideally close to its intrinsic dimension.
+    # Example Techniques: PCA (Principal Componenet Analysis), 
+    # https://en.wikipedia.org/wiki/Dimensionality_reduction
+#### Distribution_<Beta>:
+    # The beta distribution is a continuous probability distribution that models random variables with values falling inside a finite interval. Use it to model subject areas with both an upper and lower bound for possible values. 
+    # Analysts commonly use it to model the time to complete a task, the distribution of order statistics, and the prior distribution for binomial proportions in Bayesian analysis.
+    # https://statisticsbyjim.com/probability/beta-distribution/
+#### Distribution_<Binomial>:
+    # The Binomial Distributional is Multinomial Distributions Category (Distributions with 2 or more Variables). https://www.investopedia.com/terms/m/multinomial-distribution.asp
+    # The Binomial Distribution can be thought of as the sum of outcomes of an event following a Bernoulli distribution.
+    # Is used in binary outcome events, and the probability of success and failure is the same in all successive trials.
+    # Example: Flipping a coin multiple times to count the number of heads and tails.
+    # https://datasciencedojo.com/blog/types-of-statistical-distributions-in-ml/
+#### Distribution_<Exponential>:
+    # Model elapsed time between two events.
+    # Exponential distribution is one of the widely used continuous distributions. It is used to model the time taken between different events. For example, in physics, it is often used to measure radioactive decay; in engineering, to measure the time associated with receiving a defective part on an assembly line; and in finance, to measure the likelihood of the next default for a portfolio of financial assets. Another common application of Exponential distributions in survival analysis (e.g., expected life of a device/machine).
+    # https://datasciencedojo.com/blog/types-of-statistical-distributions-in-ml/
+#### Distribution_<Laplace>:
+    # Model elapsed time between two events.
+    # The Laplace distribution, one of the earliest known probability distributions, is a continuous probability distribution named after the French mathematician Pierre-Simon Laplace. Like the normal distribution, this distribution is unimodal (one peak) and it is also a symmetrical distribution. However, it has a sharper peak than the normal distribution.
+    # https://www.statisticshowto.com/laplace-distribution-double-exponential/
+#### Distribution_<Normal>:
+    # Symmetric Distribution of Values Around the Mean (Expose Positive + Negative Variables)
+    # Normal distribution is the most used distribution in data science. In a normal distribution graph, data is symmetrically distributed with no skew. When plotted, the data follows a bell shape, with most values clustering around a central region and tapering off as they go further away from the center.
+    # https://datasciencedojo.com/blog/types-of-statistical-distributions-in-ml/
+### Distribution_<Log-Normal>:
+    # Exposes just Negative Variables, hence  log-normal distributions are positively skewed with long right tails due to low mean values and high variances in the random variables.
+    # A log-normal distribution is a statistical distribution of logarithmic values from a related normal distribution.
+    # Key characteristic: Mainly, <Normal_Distributions> can allow for negative random variables while <Log-Normal_Distributions> include all positive variables.
+    # https://www.investopedia.com/terms/l/log-normal-distribution.asp
+#### Distribution_<Pareto>:
+    # The Pareto Principle, named after economist Vilfredo Pareto, specifies that 80% of consequences come from 20% of the causes, asserting an unequal relationship between inputs and outputs. This principle serves as a general reminder that the relationship between inputs and outputs is not balanced. The Pareto Principle is also known as the Pareto Rule or the 80/20 Rule.
+    # https://www.investopedia.com/terms/p/paretoprinciple.asp
+#### Distribution_<Poisson>:
+    # The probability that an event May or May not occur.
+    # Poisson distribution deals with the frequency with which an event occurs within a specific interval. Instead of the probability of an event, Poisson distribution requires knowing how often it happens in a particular period or distance.
+    # The main characteristics which describe the Poisson Processes are:
+        # The events are independent of each other.
+        # An event can occur any number of times (within the defined period).
+        # Two events can’t take place simultaneously.
+    # Resources: https://datasciencedojo.com/blog/types-of-statistical-distributions-in-ml/
+#### Distribution_<Triangular>:
+    # A triangular distribution is a continuous probability distribution with a probability
+    # density function shaped like a triangle. It is defined by three values: the minimum
+    # value a, the maximum value b, and the peak value c.
+    # This is really handy as in a real-life situation we can often estimate the maximum and
+    # minimum values, and the most likely outcome, even if we don't know the mean and
+    # standard deviation.
+    # https://learnandteachstatistics.files.wordpress.com/2013/07/notes-on-triangle-distributions.pdf
+#### Distribution_<Weibull>:
+    # The Weibull distribution is a continuous probability distribution that can fit an extensive range of distribution shapes. Like the normal distribution, the Weibull distribution describes the probabilities associated with continuous data. However, unlike the normal distribution, it can also model skewed data. In fact, its extreme flexibility allows it to model both left- and right-skewed data.
+    # https://statisticsbyjim.com/probability/weibull-distribution/
+#### E
+#### Extrapolation:
+    # Extrapolation is about predicting hypothetical "future" values that fall outside a particular data set. The predictive quality of extrapolation means the method is usually used to predict unknown future values, unlike interpolation, which is usually about estimating past values.
+    # https://www.techtarget.com/whatis/definition/extrapolation-and-interpolation
+#### F
+#### Factorial_Function:
+    # 
+    # Example: 3! = 1 \cdot 2 \cdot 3 =6
+#### Factors_Predictors_Independant_Variables:
+    # Are the variables that Scientists control during an experiment in order to determine their effect on the <Response_Variable>. e.g.: Variables that affect the athletic performance. 
+    # https://www.originlab.com/index.aspx?go=Products/Origin/DataAnalysis/CurveFitting#:~:text=Curve%20fitting%20is%20one%20of,fit%22%20model%20of%20the%20relationship.
+#### Filtering_Data <Moving_Average_Smoothing>:
+    # Moving averages can smooth time series data, reveal underlying trends, and identify components for use in statistical modeling.
+    # Smoothing is the process of removing random variations that appear as coarseness in a plot of raw time series data.
+    # It reduces the noise to emphasize the signal that can contain trends and cycles.
+    # Analysts also refer to the smoothing process as filtering the data.
+#### G
+#### Gamma_Function:
+    # To extend the factorial to any real number x > 0 (whether or not x is a whole number)
+    # Ver mi Curso_Excel y/o https://www.youtube.com/watch?v=qxi0sl1Hvbk
+#### Graphs:
+    # Concept: 
+    # Categories: https://www.storytellingwithdata.com/chart-guide 
+#### H
+#### Holm_Bonferroni:
+    # In statistics, the Holm–Bonferroni method, also called the Holm method or Bonferroni–Holm method, is used to counteract the problem of multiple comparisons. 
+    # It is intended to control the family-wise error rate (FWER) and offers a simple test uniformly more powerful than the Bonferroni correction.
+    # https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method#:~:text=In%20statistics%2C%20the%20Holm%E2%80%93Bonferroni,powerful%20than%20the%20Bonferroni%20correction.
+    # See also <Bonferroni_Correction>
+#### Hyperparameter
+    # Los hiperparámetros de un modelo son los valores de las configuraciones utilizadas durante el proceso de entrenamiento.
+    # Son valores que generalmente se no se obtienen de los datos, por lo que suelen ser indicados por el científico de datos.
+#### Hypothesis_Testing:
+    # Hypothesis testing in statistics is a way for you to test the results of a survey or experiment to see if you have meaningful results. You’re basically testing whether your results are valid by figuring out the odds that your results have happened by chance. If your results may have happened by chance, the experiment won’t be repeatable and so has little use
+    # https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/#WhatisHT
+#### I
+#### Individuals:
+    # Subject (People, Things, etc)
+#### Inferential_Statistics:
+    # Descriptive statistics describes data (for example, a chart or graph) and inferential statistics allows you to make predictions (“inferences”) from that data. With inferential statistics, you take data from samples and make generalizations about a population.
+    # There are two main areas of inferential statistics:
+    # 01. Estimating parameters. This means taking a statistic from your sample data (for example the sample mean) and using it to say something about a population parameter (i.e. the population mean).
+    # 02. Hypothesis tests. This is where you can use sample data to answer research questions. For example, you might be interested in knowing if a new cancer drug is effective. Or if breakfast helps children perform better in schools.
+    # https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/inferential-statistics/
+#### Isotonic_Regression<Monotonic_Constraint>:
+    # It is a non-parametric (non-linear) regression technique which is used when the direction is strictly increasing(function).
+    # Non-parametric means nonlinearity among the variable in function. 
+    # It plots the points as near as possible to observation
+    # It can be used to predict sequence of observations in continous target data.
+    # https://www.imurgence.com/home/blog/how-to-improve-prediction-isotonic-regression-over-linear-regression
+#### Interpolation:
+    # Interpolation is a statistical method by which related known values are used to estimate an unknown value or set of values. In investing, interpolation is used to estimate prices or the potential yield of a security. Interpolation is achieved by using other established values that are located in sequence with the unknown value.
+    # https://www.investopedia.com/terms/i/interpolation.asp
+    # See also Extrapolation
+#### J
+#### K
+#### KDE<Kernel_Density_Estimation>
+    # In statistics, kernel density estimation (KDE) is the application of kernel smoothing for probability density estimation, i.e., a non-parametric method to estimate the probability density function of a random variable based on kernels as weights.
+    # KDE answers a fundamental data smoothing problem where inferences about the population are made, based on a finite data sample. 
+#### Kolmogorov-Smirnov:
+    # The Kolmogorov-Smirnov Goodness of Fit Test (K-S test) compares your data with a known distribution and lets you know if they have the same distribution. Although the test is nonparametric — it doesn’t assume any particular underlying distribution — it is commonly used as a test for normality to see if your data is normally distributed.It’s also used to check the assumption of normality in Analysis of Variance.
+    # https://www.statisticshowto.com/kolmogorov-smirnov-test/
+#### Kurtosis:
+    # Kurtosis indicates how much data resides in the tails on each side of the bell curve.
+    # https://www.investopedia.com/terms/k/kurtosis.asp
+#### L
+#### Lags:
+    # A period of time between one event or phenomenon and another.
+    # Term utilized in TSA.
+#### Least-of_Squares:
+    # The least square method is the process of obtaining the best-fitting curve or line of best fit for the given data set by reducing the sum of the squares of the offsets (residual part) of the points from the curve.
+    # https://byjus.com/maths/least-square-method/#:~:text=What%20does%20the%20least%20square,the%20points%20from%20the%20curve.
+#### M
+#### Measurements of Variability/Spread/Dispersion:
+    # Describe the dispersion of the data set.
+    # Standard Deviation + Variance + Min + Max + Kurtosis + Skewness
+#### Measurements of Central Tendency:
+    # Describe the center of the data set
+    # Mean(avg) + Median + Mode
+#### Measurements of Frequency:
+    # Describe the occurence of the data set
+    # Count
+#### Multimodal<Bimodal>:
+    # In statistics, a multimodal distribution is a probability distribution with more than one mode. These appear as distinct peaks (local maxima) in the probability density function
+    # Commonly also known as Bimodal.
+    # See also: <Unimodal>
+#### N
+#### Notations:
+    # x and y axes.Where X = Input, Y = Output.
+    # m = number of training examples
+    # x(i) = i = index
+#### Non-Parametric:
+    # Non-parametric means nonlinearity among the variable in function.
+    # It plots the points as near as possible to observation
+    # https://www.imurgence.com/home/blog/how-to-improve-prediction-isotonic-regression-over-linear-regression
+#### Nth_degree:
+    # Nth degree, or nth degree, are two words expressing a number to a certain level. 
+    # In the first word, 'Nth' or 'nth', is a word expressing a number, in two parts, 'n' and 'th',
+    # but where that number is not known, (hence the use of 'n') and a correlatory factoring, 'th', 
+    # (exponential amplification, usually from four onwards (fourth, fifth)), is used to multiply the 'n' (number),
+    # to arrive at a number, concomitant to subject matter. 
+    # The 'degree' is used as a noun, expressing the level or amount of the final multiplicated number.
+#### O
+#### Outliers:
+    # Are values that are far from the central tendency & might cause errors in processing data.
+#### P
+#### P-value:
+    # The p value is a number, calculated from a statistical test, that describes how likely you are to have found a particular set of observations if the null hypothesis were true.
+    # P values are used in hypothesis testing to help decide whether to reject the null hypothesis. The smaller the p value, the more likely you are to reject the null hypothesis.
+#### Parameter:
+    # En los modelos de aprendizaje automático, los parámetros son las variables que se estiman durante el proceso de
+    # entrenamiento con los conjuntos de datos. Por lo que sus valores NO los indica manualmente el científico de datos,
+    # sino que son obtenidos.
+#### Partitioned_Model:
+    # A partitioned model organizes and represents multiple models as partitions in a single model entity, enabling a user to easily build and manage models tailored to independent slices of data.
+    # Partitioned models are a good solution when: You want to establish a local/micro prediction strategy regarding each partition and The subgroups associated with each partition have the same behavior.
+    # We can train a partitioned model if its source dataset is not partitioned. False. You must first partition the dataset in the Settings tab of the dataset
+    # Partitioned models consist of training machine learning models over each partition of the dataset. R/ True. Dataiku DSS trains one model for each partition of the dataset (times the number of algorithms).
+    # Seasons could impact purchasing patterns more in one subgroup of the dataset than another. Building a partitioned model on the subgroup could help in this case. R/ True. When you suspect the characteristics of subgroups of the dataset, such as countries, are dissimilar, then building a partitioned model could result in a better performing model.
+    # Dataiku DSS displays the same performance summary for partitioned models as it does for non-partitioned models. R/ False. DSS does not display the performance summary for partitioned model training sessions because the display would be unreadable.
+    https://doc.dataiku.com/dss/latest/machine-learning/partitioned.html#
+#### Pearson<PCC>
+    # Pearson Correlated Coefficient.
+    # Parametric Correlation Test.
+    # Pearson is one of the three methods used for Correlation Analysis.
+    # Aim: Asseses Linear relationships between two sets of data.
+    # Measures the rank correlation (statistical dependence between the rankings of two variables). 
+    # The result always has a value between −1 and 1 (as 1 would represent an unrealistically perfect correlation)
+#### Pictograph:
+    # A pictorial symbol for a word or phrase. Pictographs were used as the earliest known form of writing, examples having been discovered in Egypt and Mesopotamia from before 3000 BC.
+#### PCA:
+    # Principal Component Analysis.
+    # Goal: Is to represent data in directions that maximize the existing VARIATIONS in the data.
+    # When working with a dataset having many variables, we may be interested in analyzing the effects of using a reduced number of variables (or dimensions) of the data.
+    # Is a popular technique for analyzing large datasets containing a high number of dimensions/features per observation, increasing the interpretability of data while preserving the maximum amount of information, and enabling the visualization of multidimensional data. Formally, PCA is a statistical technique for reducing the dimensionality of a dataset. This is accomplished by linearly transforming the data into a new coordinate system where (most of) the variation in the data can be described with fewer dimensions than the initial data. Many studies use the first two principal components in order to plot the data in two dimensions and to visually identify clusters of closely related data points. Principal component analysis has applications in many fields such as population genetics, microbiome studies, and atmospheric science.
+    # PCA analyzes only Numerical Data.
+    # Using more principal components increases the explained variance in the data.
+    # Use cases: Dimensionality Reduction, Visualizing Data, Feature Processing.
+    # https://en.wikipedia.org/wiki/Principal_component_analysis
+    # How to Analyze the effects of Dimensionality Reduction: Go to Dataiku Academy/Course: Interactive Visual Statistics/Principal Components Analysis Chapter.
+#### Polynomial_Function:
+    # Is a function that involves only non-negative integer powers or only positive integer exponents of a variable in an equation like the quadratic equation, cubic equation, etc. For example, 2x+5 is a polynomial that has exponent equal to 1.
+    # A polynomial function, in general, is also stated as a polynomial or polynomial expression, defined by its degree. The degree of any polynomial is the highest power present in it. 
+    # Used in a fit curve to model the relationship between variables
+    # https://byjus.com/maths/polynomial-functions/#:~:text=A%20polynomial%20function%20is%20a,has%20exponent%20equal%20to%201.
+#### Polynomial_Regression:
+    # Is a regression algorithm that models the relationship between a dependent(y) and independent variable(x) as nth degree polynomial.
+    # Steps for Polynomial Regression:
+        # Data Pre-processing
+        # Build a Linear Regression model and fit it to the dataset
+        # Build a Polynomial Regression model and fit it to the dataset
+        # Visualize the result for Linear Regression and Polynomial Regression model.
+        # Predicting the output.
+    # https://www.javatpoint.com/machine-learning-polynomial-regression
+#### Population:
+    # A population is any complete group with at least one characteristic in common. Populations are not just people. Populations may consist of, but are not limited to, people, animals, businesses, buildings, motor vehicles, farms, objects or events.
+#### Probability_Distributions:
+    # Concept: A probability distribution is a statistical function that describes all the possible values and likelihoods that a random variable can take within a given range. 
+    # Probability distributions come in many shapes with different characteristics, as defined by the mean, standard deviation, skewness, and kurtosis.
+    # Types: 
+        # Normal_Distribution <Bell_Curve>, Chi Square Distribution, Binomial Distribution, and Poisson Distribution.
+    # Resources: https://www.investopedia.com/terms/p/probabilitydistribution.asp
+#### Q
+#### Q-Q Plot:
+    # In statistics, a Q–Q plot (quantile-quantile plot) is a probability plot, 
+    # A graphical method for comparing two probability distributions by plotting their quantiles against each other.
+    # Observing points far from the identity line in a Q-Q plot indicates that the data could not come from the selected distribution.
+    # https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot
+#### R
+#### R2<R-Squared>:
+    # R-squared is a goodness-of-fit measure for linear regression models. 
+    # This statistic indicates the percentage of the variance in the dependent variable that the independent variables explain collectively. 
+    # R-squared measures the strength of the relationship between your model and the dependent variable on a convenient 0 – 100% scale.
+    # R-squared is always between 0 and 100%
+    # The higher is the % values the better as this means the data points are closer to the curve.
+    # https://statisticsbyjim.com/regression/interpret-r-squared-regression/
+    # See also <RMSE>
+#### Response_Variable:
+    # A response variable is the variable about which a researcher is asking a specific question. It is affected by <Factor_Variables>
+#### Regularization: 
+    # Regularization kept parameters regular or normal.
+#### Residual: 
+    # The difference between the observed sample and the estimation from the fitted curve. It can be used both for linear and non-linear relationships
+#### Ridge_Regression:
+    # Regularization technique or Model_Tunning_Method that helps overcoming over-fitting problem in machine learning models.  
+    # The common techniques are L1 and L2 Regularization commonly known as Lasso and Ridge Regression.
+    # https://www.mygreatlearning.com/blog/what-is-ridge-regression/#:~:text=Ridge%20regression%20is%20a%20model,away%20from%20the%20actual%20values.
+#### RMSE<Root_Mean_Square_Deviation>:
+    # RMSE: A metric that tells us how far apart the predicted values are from the observed values in a dataset.
+    # The lower the RMSE, the better a model fits a dataset.
+    # See also <R2>.
+    # https://www.statology.org/rmse-vs-r-squared/#:~:text=Both%20RMSE%20and%20R2,response%20variable%20in%20percentage%20terms.
+#### S
+#### Score:
+    # Graphically speaking: Assigned alternative values to data points within a dataset.
+    # Finance: Scoring and modeling, whether internally or externally developed, are used extensively in credit
+                # card lending. Scoring models summarize available, relevant information about consumers and
+                # reduce the information into a set of ordered categories (scores) that foretell an outcome. A
+                # consumer’s score is a numerical snapshot of his or her estimated risk profile at that point in time.
+                # Scoring models can offer a fast, cost-efficient, and objective way to make sound lending
+                # decisions based on bank and/or industry experience 
+                # https://www.fdic.gov/regulations/examinations/credit_card/pdf_version/ch8.pdf
+#### Seasonality:
+    # Short-term fluctuations that occur regularly in a time series.
+#### Significance_Level<Alpha>:
+    # See also <Beta_Parameters>
+    # The significance level, also known as alpha or α, is a measure of the strength of the evidence that must be present in your sample before you will reject the null hypothesis and conclude that the effect is statistically significant. 
+    # The researcher determines the significance level before conducting the experiment.
+    # The significance level is the probability of rejecting the null hypothesis when it is true. For example, a significance level of 0.05 indicates a 5% risk of concluding that a difference exists when there is no actual difference. Lower significance levels indicate that you require stronger evidence before you will reject the null hypothesis.
+    # Use significance levels during hypothesis testing to help you determine which hypothesis the data support. Compare your p-value to your significance level. If the p-value is less than your significance level, you can reject the null hypothesis and conclude that the effect is statistically significant. In other words, the evidence in your sample is strong enough to be able to reject the null hypothesis at the population level.
+    # Q: If p is greater than the significance level (alpha), then the Null Hypothesis should be accepted? R/ True; p greater than alpha indicates that the null hypothesis is definitely true.
+    # Q: If p is less than or equal to the significance level (alpha), then the Null Hypothesis be rejected? R/ TRUE.
+    # https://statisticsbyjim.com/glossary/significance-level/
+#### Skewness:
+    # Skewness is a measurement of the distortion of symmetrical distribution or asymmetry in a data set. Skewness is demonstrated on a bell curve when data points are not distributed symmetrically to the left and right sides of the median on a bell curve.
+    # https://www.investopedia.com/terms/s/skewness.asp
+#### Spearman:
+    # Rank Correlation Coefficient
+    # Aim: Asseses Non-Parametric (Non-Linear/Monotonic) relationships.
+    # Measures the rank correlation (statistical dependence between the rankings of two variables). 
+    # It assesses how well the relationship between two variables can be described using a monotonic function.
+    # Spearman is one of the three methods used for Correlation Analysis.
+    # https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient
+#### Standard_Deviation: 
+    # Symbol: std(x)
+    # Category: Central Tendency Measurement.
+    # Concept: In probability and statistics, the standard deviation of a random variable is the average distance of a random variable from the mean value.
+    # Aim: It represents how the random variable is distributed near the mean value. Small standard deviation indicates that the random variable is distributed near the mean value. Big standard deviation indicates that the random variable is distributed far from the mean value.     
+    # Formula:   std(X) = 2  
+#### Statistics: 
+    # Statistics is the science of collecting, analyzing, presenting, and interpreting data.
+#### Statistical_Tests:
+    # For Numerical Data:
+        # 01. One-Sample Test:
+            # Location:
+                # Student T-test
+                # Sign Test
+            # Distribution:
+                # Shapiro Wilk Test
+        # 02. Two-Sample Test:
+            # Location:
+                # Student T-test
+                # Median Mood Test
+            # Distribution:
+                # Kolmogorov-Smirnov Test
+        # 03. N-Sample Test:
+            # One Way ANOVA
+            # Median Mood
+            # PairWise Student
+            # PairWise Median Mood
+    # For Categorical Data: 
+        # 01. Categorical Test:
+            # Chi-Squared Independence Test:
+                # If outcomes are different then Variables are not independent. 
+#### Stochastic_Trend:
+    # Trend that occasionally changes over time in an unpredictable way.
+    # See also: Determinisitic_Trend.
+#### T
+#### T-Test:
+    # A t-test is any statistical hypothesis test in which the test statistic follows a Student's t-distribution under the null hypothesis.
+    # In statistics, a method of testing hypotheses about the mean of a small sample drawn from a normally distributed population when the population standard deviation is unknown.
+    # https://www.britannica.com/science/Students-t-test
+#### TSA:
+    # Time Series Analysis aka Forecasting aka Regression Model.
+    # Time series analysis is a specific way of analyzing a sequence of data points collected over an interval of time.
+    # https://www.tableau.com/learn/articles/time-series-analysis#definition
+    # Components:
+        # Trend: Upward, Downward, Linear, Non Linear (Exponential)
+        # Seasonality: Seasonal Up or Down pattern repeatedly  over time.
+        # Cycle: Non seasonal up or down pattern. Less frequent behaivour.
+        # Random_Variation: Derived from uncontrollable causes (e.g.: earthquakes)
+    # Objectives: Descriptive, Explanatory, Forecasting & Control.
+#### Trend:
+    # Concept: Direction ni which the Time Series is running during a long period.
+    #### Downtrend: 
+        # aka Bearish, Decrease pattern
+    #### Uptrend: 
+        # aka Bullish, Increase pattern.
+#### Training_Set:
+    # Data used to train the model.
+    # It comprehends: the input features (e.g.:the size of the house) vs the targets (e.g.: price of the house)
+#### Two_Way_Frecuency_Tables:
+    # A two way table is a way to display frequencies or relative frequencies for two categorical variables.
+    # One category is represented by rows and a second category is represented by columns.
+#### U
+#### Uniform_Distribution:
+    # In statistics, uniform distribution refers to a type of probability distribution in which all outcomes are equally likely. A deck of cards has within it uniform distributions because the likelihood of drawing a heart, a club, a diamond, or a spade is equally likely. A coin also has a uniform distribution because the probability of getting either heads or tails in a coin toss is the same.
+    # https://www.investopedia.com/terms/u/uniform-distribution.asp
+#### Unimodal:
+    # In mathematics, unimodality means possessing a unique mode. More generally, unimodality means there is only a single highest value, somehow defined, of some mathematical object.
+    # See also <Multimodal>.
+#### Univariate_Analysis:
+    # Univariate analysis is used to compare the data distribution of individual variables.
+#### V
+#### Variable: 
+    # Concept:
+    # Types: Categorical and Numerical
+#### Variance:
+    # Symbol:   σ2, s2, or Var(X).
+    # Category: Dispersion Measurement.
+    # Concept:  The variance is the square of the standard deviation.
+    # Aim:      Estimates how far a set of numbers (random) are spread out from their mean value.
+    # Formula:  
+#### Venn Diagram:
+    # A Venn diagram is a widely used diagram style that shows the logical relation between sets, popularized by John Venn (1834–1923) in the 1880s.
+    # The diagrams are used to teach elementary set theory, and to illustrate simple set relationships in probability, logic, statistics, linguistics and computer science.
+#### W
+#### X
+#### Y
+#### Y Hat
+    # Y hat (written ŷ) is the predicted value of y (the dependent variable) in a regression equation. It can also be considered to be the average value of the response variable.
+    # The regression equation is just the equation which models the data set. The equation is calculated during regression analysis. A simple linear regression equation can be written as:
+    # ŷ = b0 + b1x.
+    # Since b0 and b1 are constants defined by your analysis, finding ŷ for any particular point simply involves plugging in the relevant value of x.
+    # More info: https://www.statisticshowto.com/y-hat-definition/
+#### Z
